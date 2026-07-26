@@ -3,8 +3,10 @@ on: push
 
 jobs:
   job1:
-    runs-on: ubuntu2604
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
       - run: pwd
       - run: ls
+      - run: javac Main.java
+      - run: java Main
