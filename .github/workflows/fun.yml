@@ -7,5 +7,7 @@ jobs:
       - uses: actions/checkout@v7
       - run: |
           export JAVA_HOME=$JAVA_HOME_25_X64
+          export PATH=$JAVA_HOME/bin:$PATH
+          javac -version
           javac Main.java
           java Main
