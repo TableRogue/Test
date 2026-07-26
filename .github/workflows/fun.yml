@@ -4,6 +4,8 @@ on: push
 jobs:
   job1:
     runs-on: ubuntu-latest
+    env:
+      JAVA_HOME: ${{ env.JAVA_HOME_25_X64 }}
     steps:
       - uses: actions/checkout@v7
       - run: pwd
