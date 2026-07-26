@@ -3,7 +3,7 @@ on: push
 
 jobs:
   job1:
+    runs-on: ubuntu-lastest
     steps:
-      - runs-on: ubuntu-lastest
       - run: pwd
       - run: ls
