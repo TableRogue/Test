@@ -1,3 +1,5 @@
-void main() {
-    IO.print("你好");
+class Main{
+    void main() {
+        IO.print("你好");
+    }
 }
