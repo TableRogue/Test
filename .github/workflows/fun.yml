@@ -1,14 +1,11 @@
 on: push
 
-
 jobs:
   job1:
     runs-on: ubuntu-latest
-    env:
-      JAVA_HOME: ${{ env.JAVA_HOME_25_X64 }}
     steps:
       - uses: actions/checkout@v7
-      - run: pwd
-      - run: ls
-      - run: javac Main.java
-      - run: java Main
+      - run: |
+          export JAVA_HOME=$JAVA_HOME_25_X64
+          javac Main.java
+          java Main
